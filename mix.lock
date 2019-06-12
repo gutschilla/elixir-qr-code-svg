@@ -1,0 +1,3 @@
+%{
+  "qr_code": {:hex, :qr_code_term, "0.1.0", "b71432ea01da4822c7ca0b2037850067718ec71f9aaceb381da6deed44809763", [:mix], [], "hexpm"},
+}
