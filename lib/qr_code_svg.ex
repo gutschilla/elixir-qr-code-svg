@@ -53,11 +53,11 @@ defmodule QrCodeSvg do
     end
   end
 
-  def wrap({rects, x, y}) do
+  def wrap({rects, _x, y}) do
     """
     <svg xmlns="http://www.w3.org/2000/svg"
     version="1.1" baseProfile="full"
-    width="#{x}" height="#{y}" viewBox="0 0 #{x} #{y}">
+    width="#{y}" height="#{y}" viewBox="0 0 #{y} #{y}">
     #{rects}
     </svg>
     """
