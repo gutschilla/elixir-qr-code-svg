@@ -1,6 +1,37 @@
 # QrCodeSvg
 
-**TODO: Add description**
+Creates a simple SVG out of the bytes that QRCode creates.
+
+## QrCodeSvg.encode(string, ecc \\ 'M')
+
+Encodes a string, returns a string containing an SVG.
+
+Accepts ecc (error correction) mode as parameter (defaults to 'M'), can be
+
+- 'L':  7% lost data recovery
+- 'M': 15%
+- 'Q': 25% (doesn't always work)
+- 'H': 30% (often fails)
+
+## Examples
+
+```elixir
+svg = QrCodeSvg.encode("Hey")
+"<svg... ><rect../></svg>"
+```
+
+## Known bug
+
+Due to a some unpleasantries in the underlying QRCode module, longer strings do
+not work.
+
+```elixir
+QrCodeSvg.encode("http://foo.bar.baz")
+```
+
+Will throw up :-/
+
+
 
 ## Installation
 
